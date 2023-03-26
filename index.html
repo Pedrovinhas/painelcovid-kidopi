@@ -8,21 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> COVID Painel </title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/country.css">
-    <link rel="stylesheet" href="/styles/skeleton-loading.css">
+    <link rel="stylesheet" href="/styles/app.css">
 </head>
 <body>
     <header class="header">
-        <img class="header__logo" src="/assets/header-cell.png" alt="Imagem representando o vírus COVID-19">
-        <div class="header__titles">
-            <h1 class="title__heading">
-                Painel COVID
-            </h1>
-            <p class="subtitle">
-                Tenha dados sobre o Coronavírus ao redor do mundo
-            </p>
-        </div>
+        <nav>
+            <img src="/assets/header-img.png" alt="" class="header__img"> 
+            <div class="header__titles">
+              
+                <h1 class="title__heading">
+                    Painel Coronavírus
+                </h1>
+                <p class="subtitle">
+                    Tenha dados sobre o Coronavírus ao redor do mundo
+                </p>
+            </div>
+        </nav>
     </header>    
 
     <section class="filter-container">
@@ -36,8 +37,8 @@
     </section>
 
     <main class="main__content" id="main">
-        <div class="content__card" id="brazil">
-            <img src="/assets/brazil-flag.svg" alt="">
+        <form class="content__card" id="brazil">
+            <img src="/assets/brazil-flag.svg" alt="Bandeira do Brasil" >
             <div class="card__text">
                 <span class="country__text">
                     Brasil
@@ -49,12 +50,12 @@
                     </span>
                 </a>
             </div>
-        </div>
-        <div class="content__card" id="australia">
-            <img src="/assets/brazil-flag.svg" alt="">
+        </form>
+        <form class="content__card" id="australia">
+            <img src="/assets/australia-flag.svg" alt="Bandeira da Austrália" >
             <div class="card__text">
                 <span class="country__text">
-                    Austrália
+                    Australia
                 </span>
                 <a href='#' class="country__link">
                     <img src="" alt="">
@@ -63,12 +64,12 @@
                     </span>
                 </a>
             </div>
-        </div>
-        <div class="content__card" id="canada">
-            <img src="/assets/brazil-flag.svg" alt="">
+        </form>
+        <form class="content__card" id="canada">
+            <img src="/assets/canada-flag.svg" alt="Bandeira do Canadá">
             <div class="card__text">
                 <span class="country__text">
-                    Canadá
+                    Canada
                 </span>
                 <a href='#' class="country__link">
                     <img src="" alt="">
@@ -77,7 +78,7 @@
                     </span>
                 </a>
             </div>
-        </div>
+        </form>
     </main>
 
     <footer class="footer">
@@ -87,9 +88,11 @@
     </footer>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/script/form.js"></script>
     <script src="/script/filter.js"></script>
     <script src="/script/viewAll.js"></script>
     <script src="/script/index.js"></script>
+    <script src="/script/lastAccess.js"></script>
     <script src="/script/skeletonLoading.js"></script>
 </body>
 </html>
