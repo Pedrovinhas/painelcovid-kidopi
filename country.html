@@ -5,28 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Painel COVID </title>
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/country.css">
 </head>
 <body>
     <header class="header__country">
-        <h1 class="country__title" id="country-name">
+        <div class="country__title" >
+            <h1 id="country-name">
 
-        </h1>
+            </h1>
+            <span class="country-state">
+
+            </span>
+            
+        </div>
+
+        <select id="selectState">
+            <!-- <option value="viewAll" selected> Ver todos </option> -->
+        </select>
     </header>
     <div class="chart__container">
         <canvas id="myChart"></canvas>
     </div>
+    <div class="table__numbers">
+
+    </div>
+
     <div class="country__content">
         <h1>
 
         </h1>
     </div>
 
+    <footer class="footer">
+        <p class="footer__text">
+         
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/script/index.js"></script>
     <script src="/script/filter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/script/chart.js"></script>
+    <script src="/script/select.js"></script>
+    <script src="/script/lastAccess.js"></script>
     <script>
         getCountryData()
     </script>
