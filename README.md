@@ -46,7 +46,8 @@ Este também foi um teste técnico proporcionado pela Kidopi, onde devíamos exp
 
 **Back-end**
 - [X] Criação da API em PHP.
-- [X] Armazenar data e hora de todos acessos à API-Covid-19 e mostrar o país consultado.
+- [X] Armazenar data e hora de todos acessos à API-Covid-19 e o país consultado.
+- [X] Disponilibizar os dados para o Front-End.
 - [X] Utilizar banco de dados MySQL
 
 **Observações**
