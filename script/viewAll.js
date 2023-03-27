@@ -4,7 +4,7 @@ countriesCards.forEach(countryCard => {
   countryCard.addEventListener('click', () => {
     console.log(countryCard)
     let COUNTRY = countryCard.getAttribute('id')
-    console.log('oi')
+
     const API_COVID_URL = `https://dev.kidopilabs.com.br/exercicio/covid.php?pais=${COUNTRY}`
 
     const getSelectedCountryData = async () => {
@@ -28,7 +28,6 @@ async function getCountryFlag(countryName) {
     const data = await response.json();
     return data[0].flags.svg;
   } catch (error) {
-    // console.error(error);
     return null;
   }
 }
@@ -40,7 +39,7 @@ async function getCountryList() {
   const countryList = await Promise.all(
     Object.values(data)
       .map(async country => {
-        // console.log(data)
+ 
         const flagUrl = await getCountryFlag(country);
         return {
           name: country,
@@ -50,13 +49,13 @@ async function getCountryList() {
           recovered: country.recovered
         };
       }));
-  // console.log(countryList)
+
   return countryList;
 }
 
 function createCountryCard(country) {
 
-  const cardContent = document.createElement('div')
+  const cardContent = document.createElement('form')
   cardContent.classList.add('content__card')
   cardContent.setAttribute('id', country.name)
 
@@ -92,11 +91,10 @@ function createCountryCard(country) {
   textAnchor.appendChild(iconImg)
 
   const spanInformation = document.createElement('span')
-  spanInformation.textContent = 'Clique aqui para mais informações'
+  spanInformation.textContent = 'Acesse para mais informações'
 
   textAnchor.appendChild(spanInformation)
 
-  // console.log(cardContent)
 
   function getSelectedCountryDataWhenClicked() {
     let COUNTRY = cardContent.getAttribute('id')
@@ -144,7 +142,12 @@ function createCountryCard(country) {
   }
 
   filterInput.addEventListener('input', filterCountryByName)
+  
+  const countriesForm = document.querySelectorAll('.content__card')
 
+  countriesForm.forEach(countryForm => {
+    countryForm.addEventListener('click', submitForm)
+})
 
 
   return cardContent;
@@ -172,5 +175,9 @@ function displayAllCountries() {
   })
 
 }
+
+
+
+
 
 viewAllButton.addEventListener('click', displayAllCountries)
