@@ -2,6 +2,8 @@ const filterInput = document.getElementById('filter')
 
 const cardsElements = document.querySelectorAll('.content__card')
 
+
+
 const filterCountryByName = () => {
     if(filterInput.value != '') {
 
@@ -14,9 +16,11 @@ const filterCountryByName = () => {
 
             if(!countryName.includes(filterText)) {
                 card.classList.add('sr-only')
+                console.log(cardsElements)
             } else {
                 card.classList.remove('.sr-only')
             }
+           
 
         })
     }  else {
@@ -41,7 +45,7 @@ const getAvailableCountries = async () => {
         })
 }
 
-// const viewAllButton = document.getElementById('show-all')
+
 
 const showAllCountries = async() => {
     await getAvailableCountries()
