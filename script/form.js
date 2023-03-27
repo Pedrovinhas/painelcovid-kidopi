@@ -6,8 +6,18 @@ async function submitForm(event) {
     const country = countryForm.getAttribute('id')
     console.log(country)
 
+    const date = new Date().toLocaleDateString('pb-BR', {
+        year: 'numeric',
+        month: "long",
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric'
+    })
+
+    console.log(date)
+
     const postCountryData = {
-        last_access: new Date().toISOString(),
+        last_access: date,
         country
     }
 
