@@ -9,7 +9,6 @@
     grid-template-rows: 1fr;
     place-items: center;
   
-    column-gap: 45px;
     row-gap: 30px;
     align-items: flex-start;
     justify-content: center;
@@ -20,7 +19,7 @@
   }
   
   .content__card {
-    width: 475px;
+    width: 400px;
     height: 120px;
   
     border: 1px solid #2f3030;
