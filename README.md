@@ -5,7 +5,7 @@
       <img alt="Linguagem mais usada na aplicação" src="https://img.shields.io/github/languages/top/Pedrovinhas/painelcovid-kidopi?color=121212&labelColor=0f352e">
       <img alt="Linguagens usadas" src="https://img.shields.io/github/languages/count/Pedrovinhas/keepalive?color=121212&labelColor=0f352e">
       <img alt="Último commit" src="https://img.shields.io/github/last-commit/Pedrovinhas/keepalive?color=121212&labelColor=0f352e">
-      <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedrovinhas/keepalive?color=121212&labelColor=0f352e">
+      <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedrovinhas/painelcovid-kidopi?color=121212&labelColor=0f352e">
       <img alt="Licença" src="https://shields.io/badge/license-MIT-ff7f00&?&style=flat?&color=121212&labelColor=0f352e">
   </p>  
 </h1>
